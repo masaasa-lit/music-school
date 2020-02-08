@@ -1,0 +1,307 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.title {
+  background-image: url(https://cdn.pixabay.com/photo/2015/05/07/11/02/guitar-756326_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.title a {
+  color: ivory;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+nav {
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 30px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 20px;
+}
+nav a:hover {
+  color: skyblue;
+}
+nav ul {
+  background-color: grey;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  height: 40px;
+}
+nav li {
+  display: inline-block;
+  margin-right: 40px;
+}
+.info {
+  background-color: black;
+  height: 3000px;
+  flex: 1;
+}
+.sub {
+  background-color: black;
+}
+.about {
+  padding: 10px;
+  margin: 10px;
+  height: 263px;
+  border-radius: 10px;
+  position: relative;
+  background: linear-gradient(90deg,grey, rgb(53, 46, 46))
+}
+.image {
+  float: left;
+  border-radius: 10px;
+}
+.intro {
+  position: absolute;
+  left: 300px;
+  top: 30px;
+  float: left;
+  z-index: 2;
+}
+.instruments {
+  float: left;
+}
+.lessons:hover {
+box-shadow: 0 10px 15px -5px rgba(0,0,0,.15),0 0 5px rgba(0,0,0,.1);
+transform: translateY(-3px);
+transition: 0.3s;
+background: rgba(180, 171, 171, 0.5);
+}
+.instruments h3 {
+  font-size: 25px;
+  color: ivory;
+  border-left: 10px solid peru;
+  padding-left: 10px;
+}
+.instruments p {
+  font-size: 20px;
+  color: ivory;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  line-height: 2;
+}
+.teachers {
+  float: left;
+}
+.lessons {
+  height: 350px;
+  width: 48.1%;
+  background-color: rgb(184, 170, 170);
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  float: left;
+  position: relative;
+}
+.about2 {
+  padding: 10px;
+  margin: 10px;
+  height: 1150px;
+  border-radius: 10px;
+  position: relative;
+  background: linear-gradient(90deg,grey, rgb(53, 46, 46))
+}
+h1 {
+  color: ivory;
+  font-size: 75px;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 0.065em;
+}
+h2 {
+  color: ivory;
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Inria Serif', serif;
+  letter-spacing: 0.05em;
+  border: 5px solid snow;
+  margin: 10px;
+}
+p {
+  font-size: 26px;
+  color: ivory;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  line-height: 2;
+}
+.login {
+  position: absolute;
+  top: 10px;
+}
+.image img {
+  opacity: 0.7;
+}
+.teachers img{
+  border-radius: 100%;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.price table {
+  background-color: linen;
+  width: 100%;
+  height: 100px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.price td {
+  border: 1px solid black;
+}
+.price th {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+}
+.price {
+  padding: 15px;
+  margin: 10px;
+  height: 400px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,grey, rgb(53, 46, 46))
+}
+.color-change {
+  text-decoration: underline;
+  color: orangered;
+}
+.access {
+  padding: 20px;
+  margin: 10px;
+  height: 1050px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,grey, rgb(53, 46, 46))
+}
+.access iframe {
+  margin: 10px;
+  text-align: center;
+}
+.access a {
+  font-size: 30px;
+  color: ivory;
+  font-family: 'M PLUS 1p', sans-serif;
+  line-height: 2;
+  text-decoration: none;
+}
+.access span {
+  color: yellow;
+}
+.access span:hover {
+  color: skyblue;
+}
+.access .map {
+  text-decoration-line: underline;
+}
+h4 {
+  font-size: 40px;
+  font-weight: 100;
+  color: ivory;
+  border: 3px solid ivory;
+  margin: 5px;
+  padding: 5px;
+  width: 200px;
+  line-height: 1.2;
+}
+.ask {
+  padding: 20px;
+  margin: 10px;
+  height: 800px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,grey, rgb(53, 46, 46))
+}
+.ask a {
+  position: relative;
+  color: white;
+  float: right;
+  font-size: 20px;
+  text-decoration: none;
+  opacity: 0.4;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.ask span {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  box-sizing: border-box;
+}
+.ask a:hover, .ask span:hover {
+  transition-duration: 0.5s;
+  opacity: 1;
+}
+.textbox{
+  width: 50%;
+  height: 20px;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 16px;
+}
+.largetext {
+  width: 50%;
+  height: 60px;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 16px;
+}
+.button {
+  width: 200px;
+  font-size: 16px;
+  background-color: white;
+  position: absolute;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: black;
+  text-align: center;
+  text-decoration: inherit;
+  box-shadow: 0 6px 0 rgb(65, 64, 64);
+  transition: color .3s, background .3s, box-shadow .3s, transform 0.3s;
+}
+.button:hover {
+  color: white;
+  background: gray;
+  box-shadow: 0 3px 0 black;
+  transform: translateY(3px);
+}
+
+.button:active {
+    color: whitesmoke;
+    background: gray;
+    box-shadow: 0 0 0 black;
+    transform: translateY(6px);
+    transition-duration: .1s;
+}
+footer {
+  color: white;
+  text-align: center;
+}
