@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+.login {
+  z-index: 20;
+  position: relative;
+}
 .title {
   background-image: url(https://cdn.pixabay.com/photo/2015/05/07/11/02/guitar-756326_1280.jpg);
   background-repeat: no-repeat;
@@ -11,6 +15,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 10;
 }
 .title a {
   color: ivory;
@@ -123,7 +128,7 @@ h1 {
   color: ivory;
   font-size: 75px;
   text-align: center;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Noto Serif JP', serif;
   letter-spacing: 0.065em;
 }
 h2 {
@@ -134,6 +139,11 @@ h2 {
   letter-spacing: 0.05em;
   border: 5px solid snow;
   margin: 10px;
+}
+h3 {
+  color: ivory;
+  font-size: 30px;
+  font-family: 'Inris Serif', serif;
 }
 p {
   font-size: 26px;

@@ -20,7 +20,7 @@ get '/signup' do
   erb :sign_up
 end
 
-post 'signin' do
+post '/signin' do
   user = User.find_by(mail: params[:mail])
   if user && user.authenticate(params[:password])
     session[:user] = user.id
@@ -28,29 +28,16 @@ post 'signin' do
   redirect '/'
 end
 
-get 'signout' do
-  session[:user] = nil
-  redirect '/'
-end
-
-post 'signup' do
-  @user = User.create(mail:params[:mail], password:params[:password], password_confirmation:params[:password_confirmation])
+post '/signup' do
+  @user = User.create(mail:params[:mail], password:params[:password],
+  password_confirmation:params[:password_confirmation])
   if @user.persisted?
     session[:user] = @user.id
   end
   redirect '/'
 end
 
-post '/form' do
-  name = params[:name]
-  email = params[:email]
-  message = params[:message]
-
-  Pony.mail(
-    :from => "masaasa0429@icloud.com",
-    :to => "59002asanuma@seiko.ac.jp",
-    :body => message,
-    :subject => "Hi"
-  )
-    redirect '/'
+get '/signout' do
+  session[:user] = nil
+  redirect '/'
 end

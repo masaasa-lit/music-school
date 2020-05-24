@@ -10,13 +10,19 @@
   <link href="https://fonts.googleapis.com/css?family=Inria+Serif|M+PLUS+1p|Roboto+Condensed&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Inria+Serif|M+PLUS+1p|Roboto+Condensed|Sawarabi+Gothic&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Inria+Serif|M+PLUS+1p|Roboto+Condensed|Sawarabi+Gothic&display=swap" rel="stylesheet">
+　<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|Noto+Serif+JP|Roboto+Condensed&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico">
-  <title>Annex Music School</title>
+  <title>桜音楽教室</title>
 </head>
 <body>
   <header id="head">
+    <div class="login">
+    <a href="/signin">ログイン</a>
+    <a href="/signup">新規登録</a>
+    <%= yield %>
+    </div>
     <div class="title">
-      <h1>Annex Music School</h1>
+      <h1>桜音楽教室</h1>
     </div>
   </header>
   <nav>
@@ -34,7 +40,7 @@
     </div>
     <div class="about">
       <div class="intro">
-        <p>アネックスミュージックスクールは、戸塚の小さな音楽教室です。<br>お子様からシニアの方まで、「楽しくわかりやすく」をモットーにレッスンを行なっております。<br>初心者のためのコースも各科目ごとに多数揃えており、<br>楽譜が読めない、初めて楽器に触れる人でも安心してレッスンを受けることができます。</p>
+        <p>桜音楽教室（旧名：アネックスミュージックスクール）は、戸塚の小さな音楽教室です。<br>お子様からシニアの方まで、「楽しくわかりやすく」をモットーにレッスンを行なっております。<br>初心者のためのコースも各科目ごとに多数揃えており、<br>楽譜が読めない、初めて楽器に触れる人でも安心してレッスンを受けることができます。</p>
       </div>
       <div class="image"><img src="https://cdn.pixabay.com/photo/2018/04/17/14/06/paper-3327583_1280.jpg" width="30%" height="265px"></div>
     </div>
@@ -145,7 +151,7 @@
     <div class="ask">
       <p>TEL.012-345-6789</p>
       <p class="form">問い合わせフォーム</p>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf77Wlb0q6zPPITm5UJvKSubQxm6xezmdjQ6u1sWMEzlRGnkA/viewform?embedded=true" width="100%" height="685" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf77Wlb0q6zPPITm5UJvKSubQxm6xezmdjQ6u1sWMEzlRGnkA/viewform?embedded=true" width="100%" height="685" frameborder="0" marginheight="0" marginwidth="0"></iframe>
       <a href="#head"><span></span>Page Top</a>
     </div>
   </div>
