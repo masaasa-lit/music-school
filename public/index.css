@@ -2,10 +2,6 @@
   margin: 0;
   padding: 0;
 }
-.login {
-  z-index: 20;
-  position: relative;
-}
 .title {
   background-image: url(https://cdn.pixabay.com/photo/2015/05/07/11/02/guitar-756326_1280.jpg);
   background-repeat: no-repeat;
@@ -150,10 +146,6 @@ p {
   color: ivory;
   font-family: 'Sawarabi Gothic', sans-serif;
   line-height: 2;
-}
-.login {
-  position: absolute;
-  top: 10px;
 }
 .image img {
   opacity: 0.7;
