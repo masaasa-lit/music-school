@@ -2,34 +2,63 @@
   margin: 0;
   padding: 0;
 }
-.title {
+
+body{
+  padding:0;
+  margin:0;
+}
+
+.answer {
+  background: black;
+}
+
+.row {
+  border-radius: 10px;
+}
+
+.table th {
+  color: whitesmoke;
+}
+
+.table td {
+  color: whitesmoke;
+}
+
+#head{
   background-image: url(https://cdn.pixabay.com/photo/2015/05/07/11/02/guitar-756326_1280.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top:0px;
+  padding:0;
+}
+
+.title {
   position: relative;
   z-index: 10;
 }
-.title a {
+
+header h1 {
   color: ivory;
-  position: absolute;
-  top: 0;
-  right: 0;
+  font-size: 75px;
+  font-family: 'Noto Serif JP', serif;
+  letter-spacing: 0.065em;
 }
-body {
-  background-color: black;
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column;
+
+.main {
+  width:100vw;
+  overflow:hidden;
 }
+
 nav {
   background-color: black;
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 30px;
+  height: 60px;
 }
 nav a {
   color: white;
@@ -53,8 +82,8 @@ nav li {
 }
 .info {
   background-color: black;
-  height: 3000px;
-  flex: 1;
+  overflow:hidden;
+  /* flex: 1; */
 }
 .sub {
   background-color: black;
@@ -62,7 +91,7 @@ nav li {
 .about {
   padding: 10px;
   margin: 10px;
-  height: 263px;
+  height: 290px;
   border-radius: 10px;
   position: relative;
   background: linear-gradient(90deg,grey, rgb(53, 46, 46))
@@ -115,26 +144,27 @@ background: rgba(180, 171, 171, 0.5);
 .about2 {
   padding: 10px;
   margin: 10px;
-  height: 1150px;
+  height: 1100px;
   border-radius: 10px;
   position: relative;
-  background: linear-gradient(90deg,grey, rgb(53, 46, 46))
+  background: linear-gradient(90deg,grey, rgb(53, 46, 46));
 }
-h1 {
-  color: ivory;
-  font-size: 75px;
-  text-align: center;
-  font-family: 'Noto Serif JP', serif;
-  letter-spacing: 0.065em;
+
+.all {
+  margin: 0 auto;
+  overflow:hidden;
+  width:1680px;
 }
+
 h2 {
   color: ivory;
-  font-size: 50px;
+  font-size: 75px;
   text-align: center;
   font-family: 'Inria Serif', serif;
   letter-spacing: 0.05em;
   border: 5px solid snow;
   margin: 10px;
+  padding: 5px;
 }
 h3 {
   color: ivory;
@@ -179,7 +209,7 @@ p {
   margin: 10px;
   height: 400px;
   border-radius: 10px;
-  background: linear-gradient(90deg,grey, rgb(53, 46, 46))
+  background: linear-gradient(90deg,grey, rgb(53, 46, 46));
 }
 .color-change {
   text-decoration: underline;
@@ -188,13 +218,12 @@ p {
 .access {
   padding: 20px;
   margin: 10px;
-  height: 1050px;
+  height: 1080px;
   border-radius: 10px;
-  background: linear-gradient(90deg,grey, rgb(53, 46, 46))
+  background: linear-gradient(90deg,grey, rgb(53, 46, 46));
 }
 .access iframe {
   margin: 10px;
-  text-align: center;
 }
 .access a {
   font-size: 30px;
@@ -225,38 +254,21 @@ h4 {
 .ask {
   padding: 20px;
   margin: 10px;
-  height: 800px;
+  height:920px;
   border-radius: 10px;
-  background: linear-gradient(90deg,grey, rgb(53, 46, 46))
+  background: linear-gradient(90deg,grey, rgb(53, 46, 46));
+  margin-bottom:80px;
 }
-.ask a {
-  position: relative;
+
+.ask label {
   color: white;
-  float: right;
+}
+
+.ask a {
+  color: white;
   font-size: 20px;
-  text-decoration: none;
-  opacity: 0.4;
-  position: fixed;
-  bottom: 0;
-  right: 0;
 }
-.ask span {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  box-sizing: border-box;
-}
-.ask a:hover, .ask span:hover {
-  transition-duration: 0.5s;
-  opacity: 1;
-}
+
 .textbox{
   width: 50%;
   height: 20px;
@@ -303,7 +315,15 @@ h4 {
     transform: translateY(6px);
     transition-duration: .1s;
 }
+
 footer {
+   text-align: center;
+   width: 100vw;
+   height: 50px;
+   margin-top:35px;
+   margin-left:0;
+}
+
+footer h5 {
   color: white;
-  text-align: center;
 }

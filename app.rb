@@ -12,32 +12,35 @@ get '/' do
   erb :index
 end
 
-get '/signin' do
-  erb :sign_in
+post '/answers' do
+  Answer.create(
+    name: params[:name],
+    age: params[:age],
+    gendar: params[:gendar],
+    grade: params[:grade],
+    email: params[:email],
+    password: params[:password],
+    date: params[:date],
+    content: params[:content]
+  )
+  redirect '/'
 end
 
-get '/signup' do
-  erb :sign_up
+get '/answers' do
+  @answers =Answer.all
+  erb :answers
 end
 
-post '/signin' do
-  user = User.find_by(mail: params[:mail])
-  if user && user.authenticate(params[:password])
-    session[:user] = user.id
+helpers do
+  def protected!
+    unless authorized?
+      response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
+      throw(:halt, [401, "Not authorized\n"])
+    end
   end
-  redirect '/'
-end
 
-post '/signup' do
-  @user = User.create(mail:params[:mail], password:params[:password],
-  password_confirmation:params[:password_confirmation])
-  if @user.persisted?
-    session[:user] = @user.id
+  def authorized?
+    @auth ||= Rack::Auth::Basic::Request.new(request.env)
+    @auth.provided? && @auth.basic? && @auth.crudentials && @auth.crudentials == ['changeme','changeme']
   end
-  redirect '/'
-end
-
-get '/signout' do
-  session[:user] = nil
-  redirect '/'
 end

@@ -1,6 +1,202 @@
-<% unless session[:user] %>
-  <h3>未ログイン</h3>
-<% else %>
-  <a href="/signout">ログアウト</a>
-  <h3><%= User.find(session[:user]).mail%>としてログイン</h3>
-<% end %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>桜音楽教室</title>
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Inria+Serif|M+PLUS+1p|Roboto+Condensed|Sawarabi+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+<body>
+  <header id="head">
+    <div class="title">
+      <h1>桜音楽教室</h1>
+    </div>
+  </header>
+  <div class="main">
+  <nav>
+    <ul>
+      <li><a href="#sub">教室について</a></li>
+      <li><a href="#sub2">レッスン</a></li>
+      <li><a href="#sub3">料金</a></li>
+      <li><a href="#sub4">アクセス</a></li>
+      <li><a href="#sub5">お問い合わせ</a></li>
+    </ul>
+  </nav>
+  <div class="info">
+    <div class="sub" id="sub">
+      <h2>教室について</h2>
+    </div>
+    <div class="about">
+      <div class="intro">
+        <p>桜音楽教室（旧名：アネックスミュージックスクール）は、戸塚の小さな音楽教室です。<br>お子様からシニアの方まで、「楽しくわかりやすく」をモットーにレッスンを行なっております。<br>初心者のためのコースも各科目ごとに多数揃えており、<br>楽譜が読めない、初めて楽器に触れる人でも安心してレッスンを受けることができます。</p>
+      </div>
+      <div class="image"><img src="https://cdn.pixabay.com/photo/2018/04/17/14/06/paper-3327583_1280.jpg" width="30%" height="265px"></div>
+    </div>
+    <div class="sub" id="sub2">
+      <h2>レッスン</h2>
+    </div>
+    <div class="about2">
+      <div class="all">
+        <div class="lessons">
+          <div class="instruments">
+            <h3>ギター（エレキ、アコースティック）</h3>
+            <p>チューニング方法から弦の替え方、さらには曲に欠かせないリズムギターやギターソロに必要なテクニックや
+            理論などのレッスンが可能で、へヴィメタルからジャズ、クラシックから歌謡曲まで、幅広いジャンルに対応
+            できます。</p>
+          </div>
+          <div class="teachers"><img src="https://cdn.pixabay.com/photo/2018/11/15/19/49/classical-guitar-3817990__480.jpg" width="170px" height="100px">
+          </div>
+        </div>
+        <div class="lessons">
+          <div class="instruments">
+            <h3>ウクレレ</h3>
+            <p>ギターに比べると、柔らかい弦で非常にフレットが
+            押さえやすいので、幼稚園児からシニアの方まで様々な方にお勧めの楽器です。</p>
+          </div>
+          <div class="teachers"><img src="https://cdn.pixabay.com/photo/2015/06/19/00/10/ukulele-814279_1280.jpg" width="170px" height="100px">
+          </div>
+        </div>
+        <div class="lessons">
+          <div class="instruments">
+            <h3>ピアノ</h3>
+            <p>お子様のレッスンでは年齢やレベルに合わせ、
+            歌やリトミックも加えながら音感・リズム感を伸ばす
+            レッスンを行っています。
+            大人の方は、基礎からお好きな曲まで、ジャンルを問わずレッスン致します。</p>
+          </div>
+          <div class="teachers"><img src="https://cdn.pixabay.com/photo/2018/06/29/01/47/piano-3505109_1280.jpg" width="170px" height="100px">
+          </div>
+        </div>
+        <div class="lessons">
+          <div class="instruments">
+            <h3>エレキベース</h3>
+            <p>指弾きからピック弾きまで完全対応で、ベースラインに
+            必要なテクニックを学ぶことができます。
+            リズムマシーンに合わせながら確実な技術を身につけていき、中級以降はスラップやアドリブなども可能です。</p>
+          </div>
+          <div class="teachers"><img src="https://cdn.pixabay.com/photo/2015/05/27/20/57/electric-bass-787207__480.jpg" width="170px" height="100px">
+          </div>
+        </div>
+        <div class="lessons">
+          <div class="instruments">
+            <h3>ドラム</h3>
+            <p>しっかりと基礎を学びつつ、良い音、心地よいリズムの出し方など、長くドラムを楽しんでいける様にレッスンします。
+            ドラムだけでなく、カホンやジャンベなどのパーカッションも学んでいただけます。</p>
+          </div>
+          <div class="teachers"><img src="https://cdn.pixabay.com/photo/2016/11/19/13/57/drum-set-1839383__480.jpg" width="170px" height="100px">
+          </div>
+        </div>
+        <div class="lessons">
+          <div class="instruments">
+            <h3>ボーカル</h3>
+            <p>基本的な発声法をはじめ、お好きな曲をマスターできます。ポップス・日本歌曲など
+            いろいろなジャンルを学べます。カラオケ好きな方やアコースティックギターでの弾き語りをやってみたい方などに最適な、ボイストレーニングを中心にレッスンします。</p>
+          </div>
+          <div class="teachers"><img src="https://cdn.pixabay.com/photo/2016/03/09/10/45/microphone-1246057__480.jpg" width="170px" height="100px">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sub" id="sub3">
+      <h2>料金</h2>
+    </div>
+    <div class="price">
+      <p>・ベーシックコース<br>1回30分の個人レッスン</p>
+      <table>
+        <tr>
+          <th></th>
+          <th>月２回</th>
+          <th>月3〜４回</th>
+        </tr>
+        <tr>
+          <th>高校生以下</th>
+          <th>7000円</th>
+          <th>9000円</th>
+        </tr>
+        <tr>
+          <th>一般</th>
+          <th>8000円</th>
+          <th>10000円</th>
+        </tr>
+      </table>
+      <p>上記の価格は全て<span class="color-change">税抜</span>です。<br>上記以外にも月1回からのコース、グループレッスンなどがございます。お気軽にお問い合わせください。</p>
+    </div>
+    <div class="sub" id="sub4">
+      <h2>アクセス</h2>
+    </div>
+    <div class="access">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d813.0409745895427!2d139.53036002924256!3d35.401187791921984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185a83ac3c84a5%3A0x92b798244bfb9a10!2z44CSMjQ0LTAwMDMg56We5aWI5bed55yM5qiq5rWc5biC5oi45aGa5Yy65oi45aGa55S677yU77yS77yV77yT4oiS77yR!5e0!3m2!1sja!2sjp!4v1577338246536!5m2!1sja!2sjp" width="700" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      <p>A館:1F 13の場所が教室になります。館外のみからのアクセスとなります。<br>B館:地下1F 26の場所が教室となります。ノースエレベーターの隣です。</p>
+      <p>サクラス戸塚のフロアガイドは</p><a href="https://www.saclass-totsuka.jp/pdf/floor_guide.pdf" target="_blank"><span class="map">こちら</span></a>
+      <h4>電車の場合</h4>
+      <p>戸塚駅より徒歩3分のサクラス戸塚へ、戸塚駅西口にあるトツカーナを通り陸橋を渡ってお越しください。</p>
+      <h4>お車の場合</h4>
+      <p>サクラス戸塚の駐車場をご利用いただけます。当教室は駐車場割引サービスはございませんのでご了承ください。<br>横浜新道方面からは矢沢交差点を左折<br>国道1号を大船方面からは清源院入口交差点を左折</p>
+    </div>
+    <div class="sub" id="sub5">
+      <h2>お問い合わせ</h2>
+    </div>
+    <div class="ask">
+      <p>TEL.012-345-6789</p>
+      <a href="/answers">回答一覧</a>
+      <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+      <div class="panel panel-default">
+      <p>問い合わせフォーム</p>
+      <div class="panel-body">
+      <form action="/answers" method="post">
+        <div class="form-group">
+          <label for="name">名前（必須)</label><br>
+          <input type="text" name="name" id="name" placeholder="ここに名前を入力" required>
+        </div>
+        <div class="form-group">
+          <label for="age">年齢</label><br>
+          <input type="number" name="age" id="age" placeholder="ここに年齢を入力">
+        </div>
+        <div class="form-group">
+          <label for="grade">学年</label><br>
+          <select name="grade" id="grade">
+            <option value="中１">中学１年</option>
+            <option value="中２">中学２年</option>
+            <option value="中３">中学３年</option>
+            <option value="高１">高校１年</option>
+            <option value="高２">高校２年</option>
+            <option value="高３">高校３年</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="gendar">性別</label><br>
+          <input type="radio" name="gendar" id="gendar" value="man" checked>男
+          <input type="radio" name="gendar" id="gendar" value="woman">女
+        </div>
+        <div class="form-group">
+          <label for="email">メールアドレス(必須)</label><br>
+          <input type="email" name="email" id="email" placeholder="メールアドレスを入力" required>
+        </div>
+        <div class="form-group">
+          <label for="date">日付</label><br>
+          <input type="date" name="date" id="date">
+        </div>
+        <div class="form-group">
+          <label for="password">パスワード(必須)</label><br>
+          <input type="password" name="password" id="password" maxlength="10" minlength="6" placeholder="パスワードを入力" required><br>
+        </div>
+        <div class="form-group">
+          <label for="content">感想・質問・その他</label><br>
+          <textarea name="content" id="content" rows="4" cols="40" placeholder="その他感想や質問はこちら"></textarea>
+        </div>
+        <input type="submit" class="btn btn-default pull-left"></input>
+        <input type="reset" class="btn btn-warning pull-left"></input>
+      </form>
+    </div>
+  <footer><h5>&copy;Annex Music School</h5></footer>
+  </div>
+  </div>
+</body>
+</body>
+</html>
